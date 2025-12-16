@@ -76,10 +76,6 @@ extraEnv:
     value: "0.0.0.0"
   - name: PORT
     value: "1337"
-  - name: STRAPI_URL
-    value: https://strapi.devops.openg2p.org
-  - name: STRAPI_ADMIN_URL
-    value: https://strapi.devops.openg2p.org/admin
 
 # Resource limits (recommended for production)
 resources:

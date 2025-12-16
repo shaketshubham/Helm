@@ -58,7 +58,7 @@ postgresql:
 
   auth:
     username: strapi
-    password: ""  # Consider using existingSecret instead
+    password: "skfjkjfhw8e"  # Consider using existingSecret instead
     database: strapi
     # existingSecret: "postgresql-secret"  # Uncomment if using secrets
 

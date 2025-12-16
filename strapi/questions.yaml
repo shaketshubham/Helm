@@ -1,5 +1,5 @@
 questions:
-  - variable: extraEnv.STRAPI_URL
+  - variable: strapi.url
     group: "Strapi Configuration"
     label: "Strapi Public URL"
     description: "The public URL where Strapi will be accessible "
@@ -14,7 +14,7 @@ questions:
     required: true
     group: "Strapi Admin Configuration"
 
-  - variable: admin.password
+  - variable: strapi.admin.password
     label: "Strapi Admin Password"
     description: "Password for the Strapi admin user"
     type: password

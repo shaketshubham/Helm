@@ -11,7 +11,7 @@ service:
   
 istio:
   enabled: true
-  host: ""
+  # host: ""
   gatewayName: strapi-gateway
   tlsSecretName: wildcard-cert
   # Gateway will be created in the same namespace as the release
@@ -31,6 +31,7 @@ persistence:
 strapi:
   url: https://strapi.devops.openg2p.org
   adminUrl: https://strapi.devops.openg2p.org/admin
+
   appKeys: "jkfhshfuwh"
   apiTokenSalt: "jfsh78yfhsuj"
   adminJwtSecret: "jnhwh78fwyf"

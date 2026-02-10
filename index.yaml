@@ -5,7 +5,7 @@ entries:
       catalog.cattle.io/display-name: Strapi
     apiVersion: v2
     appVersion: 4.25.0
-    created: "2025-12-17T00:52:44.056076785+05:30"
+    created: "2026-02-10T17:25:26.923264269+05:30"
     dependencies:
     - name: common
       repository: https://openg2p.github.io/openg2p-helm
@@ -15,7 +15,7 @@ entries:
       repository: https://openg2p.github.io/openg2p-helm
       version: 15.5.38
     description: A Helm chart for deploying Strapi CMS on Kubernetes with Istio
-    digest: b76ccc5ee3fd5ce383c7ce640e2e485edf36ac5b77b3fef475eb79549160b97c
+    digest: a8cb31d0a87669f11ab440d942ca560dd02238432d37d6b5eba258b84b7c207a
     icon: https://openg2p.github.io/openg2p-helm/openg2p-logo.png
     keywords:
     - strapi
@@ -25,6 +25,6 @@ entries:
     name: strapi
     type: application
     urls:
-    - https://shaketshubham.github.io/Helm/strapi-1.0.0.tgz
-    version: 1.0.0
-generated: "2025-12-17T00:52:44.045915795+05:30"
+    - https://shaketshubham.github.io/Helm/strapi-1.0.1.tgz
+    version: 1.0.1
+generated: "2026-02-10T17:25:26.915836748+05:30"

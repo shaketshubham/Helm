@@ -6,7 +6,7 @@ entries:
       catalog.cattle.io/release-name: commons
       openg2p.org/add-to-rancher: openg2p.org/add-to-rancher
     apiVersion: v2
-    created: "2026-11-18T15:16:11.01957451+05:30"
+    created: "2026-11-19T13:16:07.801565403+05:30"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -57,19 +57,96 @@ entries:
       version: 1.2.0
     description: Helm chart for OpenG2P Commons infrastructure (databases, message
       queues, init jobs)
-    digest: 4c5974a0013e5d506fb5cd0d7762681bc0060c644b43268134d3da076c371552
+    digest: abbae3c6c51c5c5d4b6bb1b1918b8db4b244b41d767aad9a3af4596eded70aab
     icon: https://openg2p.github.io/openg2p-helm/openg2p-logo.png
     name: openg2p-commons-base
     type: application
     urls:
     - https://shaketshubham.github.io/Helm/openg2p-commons-base-0.0.0-develop.tgz
     version: 0.0.0-develop
+  openg2p-commons-services:
+  - annotations:
+      catalog.cattle.io/display-name: OpenG2P Commons Services
+      catalog.cattle.io/release-name: commons-services
+      openg2p.org/add-to-rancher: openg2p.org/add-to-rancher
+    apiVersion: v2
+    created: "2026-11-19T13:16:07.873455506+05:30"
+    dependencies:
+    - alias: master-data
+      condition: master-data.enabled
+      name: openg2p-master-data
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 1.1.4-rc.110
+    - condition: artifactory.enabled
+      name: artifactory
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 12.0.3
+    - condition: keymanager.enabled
+      name: keymanager
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 12.1.1
+    - condition: superset.enabled
+      name: superset
+      repository: https://apache.github.io/superset
+      version: 0.12.11
+    - condition: esignet.enabled
+      name: esignet
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 1.4.3
+    - condition: mock-identity-system.enabled
+      name: mock-identity-system
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 0.0.0-develop.9
+    - condition: odk-central.enabled
+      name: odk-central
+      repository: https://openg2p.github.io/openg2p-helm
+      version: v2025.2.2
+    - condition: openg2p-iam-service.enabled
+      name: openg2p-iam-service
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 1.4.4-rc.125
+    - condition: openg2p-inji-certify.enabled
+      name: openg2p-inji-certify
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 0.0.0-develop.14
+    - condition: openg2p-audit-manager.enabled
+      name: openg2p-audit-manager
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 1.2.0
+    - condition: openg2p-staff-portal-ui.enabled
+      name: openg2p-staff-portal-ui
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 1.2.0
+    - condition: openg2p-awe.enabled
+      name: openg2p-awe
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 1.2.2
+    - condition: partner-management.enabled
+      name: partner-management
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 1.0.2
+    - condition: openg2p-consent-manager.enabled
+      name: openg2p-consent-manager
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 1.0.2
+    - condition: keycloak-init.enabled
+      name: keycloak-init
+      repository: https://openg2p.github.io/openg2p-helm
+      version: 1.2.0
+    description: Helm chart for OpenG2P Commons application services
+    digest: 7d22bd5cd9478ccdf4f8ed09eb8c3cae147ae39a47b3ec5ad679b276d18aa5e4
+    icon: https://openg2p.github.io/openg2p-helm/openg2p-logo.png
+    name: openg2p-commons-services
+    type: application
+    urls:
+    - https://shaketshubham.github.io/Helm/openg2p-commons-services-2.3.3.tgz
+    version: 2.3.3
   strapi:
   - annotations:
       catalog.cattle.io/display-name: Strapi
     apiVersion: v2
     appVersion: 4.25.0
-    created: "2026-11-18T15:16:11.026621455+05:30"
+    created: "2026-11-19T13:16:07.879473353+05:30"
     dependencies:
     - name: common
       repository: https://openg2p.github.io/openg2p-helm
@@ -91,4 +168,4 @@ entries:
     urls:
     - https://shaketshubham.github.io/Helm/strapi-1.0.1.tgz
     version: 1.0.1
-generated: "2026-11-18T15:16:10.946512497+05:30"
+generated: "2026-11-19T13:16:07.73438533+05:30"
